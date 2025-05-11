@@ -1,0 +1,28 @@
+.techMarquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.techTrack {
+    display: flex;
+    animation: marquee 20s linear infinite;
+}
+
+.techContent {
+    flex-shrink: 0;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.techTrack:hover {
+    animation-play-state: paused;
+}
