@@ -1,13 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 
-export default function LoadingIndicator() {
+// Inner component that uses useSearchParams
+function LoadingIndicatorInner() {
   const [isLoading, setIsLoading] = useState(false)
   const pathname = usePathname()
   const searchParams = useSearchParams()
-
   useEffect(() => {
     // Untuk page refresh
     const handleStartLoading = () => setIsLoading(true)
@@ -43,5 +43,14 @@ export default function LoadingIndicator() {
     <div className='fixed top-0 left-0 w-full h-1 bg-transparent z-50'>
       <div className='h-full bg-white animate-progress-bar'></div>
     </div>
+  )
+}
+
+// Wrapper component that doesn't directly use useSearchParams
+export default function LoadingIndicator() {
+  return (
+    <Suspense fallback={null}>
+      <LoadingIndicatorInner />
+    </Suspense>
   )
 }
