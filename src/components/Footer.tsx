@@ -1,16 +1,14 @@
 'use client'
 
 import React, { useState } from 'react'
-import { 
-  SiGithub, 
-  SiMinutemailer, 
-  SiReact, 
-  SiTypescript, 
-  SiNodedotjs, 
-  SiTailwindcss, 
-  SiPostgresql, 
-  SiGit, 
-  SiSquare
+import {
+  SiGithub,
+  SiReact,
+  SiTypescript,
+  SiNodedotjs,
+  SiTailwindcss,
+  SiPostgresql,
+  SiGit,
 } from '@icons-pack/react-simple-icons'
 
 export default function Footer() {
@@ -123,7 +121,9 @@ export default function Footer() {
               <h2 className='text-2xl font-bold mb-4'>Contact Information</h2>
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3'>
-                  <SiMinutemailer size={20} className='text-[#EEE7DD]' />
+                  <svg fill='#EEE7DD' className='h-5.5 w-5.5' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                      <path d='M22,3H2A1,1,0,0,0,1,4V20a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V4A1,1,0,0,0,22,3ZM21,19H3V9.477l8.628,3.452a1.01,1.01,0,0,0,.744,0L21,9.477ZM21,7.323l-9,3.6-9-3.6V5H21Z'></path>
+                  </svg>
                   <a
                     href='mailto:alghi344@gmail.com'
                     className='hover:text-blue-400 transition-colors'
@@ -132,7 +132,12 @@ export default function Footer() {
                   </a>
                 </div>
                 <div className='flex items-center space-x-3'>
-                  <SiSquare size={20} className='text-[#EEE7DD]' />
+                  <svg className='w-5 h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>
+                    <path
+                      fill='#EEE7DD'
+                      d='M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'
+                    ></path>
+                  </svg>
                   <a
                     href='https://www.linkedin.com/in/muhamad-arfa-alghiffari-706419208/'
                     target='_blank'
@@ -157,20 +162,20 @@ export default function Footer() {
             </div>
 
             <div>
-              <h2 className='text-xl font-bold mb-2'>Skills & Technologies</h2>
+              <h2 className='text-xl font-bold mb-2'>Skills & Technologies I`ve used</h2>
               <div className='grid grid-cols-2 gap-2 text-gray-300'>
                 <div>
                   <ul className='space-y-1'>
                     <li className='flex items-center space-x-2'>
-                      <SiReact size={16} className="text-[#61DAFB]" />
+                      <SiReact size={16} className='text-[#61DAFB]' />
                       <span>React / Next.js</span>
                     </li>
                     <li className='flex items-center space-x-2'>
-                      <SiTypescript size={16} className="text-[#3178C6]" />
+                      <SiTypescript size={16} className='text-[#3178C6]' />
                       <span>TypeScript</span>
                     </li>
                     <li className='flex items-center space-x-2'>
-                      <SiNodedotjs size={16} className="text-[#339933]" />
+                      <SiNodedotjs size={16} className='text-[#339933]' />
                       <span>Node.js</span>
                     </li>
                   </ul>
@@ -178,15 +183,15 @@ export default function Footer() {
                 <div>
                   <ul className='space-y-1'>
                     <li className='flex items-center space-x-2'>
-                      <SiTailwindcss size={16} className="text-[#06B6D4]" />
+                      <SiTailwindcss size={16} className='text-[#06B6D4]' />
                       <span>TailwindCSS</span>
                     </li>
                     <li className='flex items-center space-x-2'>
-                      <SiPostgresql size={16} className="text-[#4169E1]" />
+                      <SiPostgresql size={16} className='text-[#4169E1]' />
                       <span>PostgreSQL</span>
                     </li>
                     <li className='flex items-center space-x-2'>
-                      <SiGit size={16} className="text-[#F05032]" />
+                      <SiGit size={16} className='text-[#F05032]' />
                       <span>Git/GitHub</span>
                     </li>
                   </ul>

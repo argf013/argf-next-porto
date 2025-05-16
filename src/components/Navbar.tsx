@@ -36,12 +36,11 @@ export default function Navbar() {
   const renderNavItems = (items: { label: string; path: string }[]) =>
     items.map(item => (
       <li key={item.path} className={isMobile ? 'w-full text-center py-2' : ''}>
+        {' '}
         <Link
           href={item.path}
           className={`px-3 py-2 rounded-md text-sm transition-colors ${
-            pathname === item.path
-              ? 'bg-black/[.05] dark:bg-white/[.06] font-medium'
-              : 'hover:bg-black/[.03] dark:hover:bg-white/[.03]'
+            pathname === item.path ? 'bg-white/[.06] font-medium' : 'hover:bg-white/[.03]'
           } ${isMobile ? 'block w-full' : ''}`}
           onClick={() => isMobile && setIsMenuOpen(false)}
           prefetch={true}
@@ -52,7 +51,7 @@ export default function Navbar() {
     ))
 
   return (
-    <nav className='fixed top-0 left-0 right-0 z-50 h-[100px] flex items-center bg-transparent backdrop-blur-md border-b border-black/[.08] dark:border-white/[.12]'>
+    <nav className='fixed top-0 left-0 right-0 z-50 h-[100px] flex items-center bg-transparent backdrop-blur-md border-b border-white/[.12]'>
       <div className='w-full max-w-6xl mx-auto px-4 flex items-center justify-between md:justify-center h-full'>
         <button
           className='md:hidden flex items-center transition-transform duration-300 ease-in-out hover:scale-110'

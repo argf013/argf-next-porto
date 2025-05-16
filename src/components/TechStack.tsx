@@ -40,7 +40,7 @@ const TechStackItem = ({ Icon, hoverColor }: { Icon: React.ComponentType<{ size:
 
 export default function TechStack() {
   return (
-    <section className='px-4 md:px-[100px] py-[80px] w-full md:w-[1280px] mx-auto flex flex-col gap-[40px] overflow-hidden'>
+    <section className='px-4 md:px-[100px] mt-15 md:mt-0 py-[80px] w-full md:w-[1280px] mx-auto flex flex-col gap-[40px] overflow-hidden'>
       <span className='font-bold text-[30px] text-center'>Tech Stack</span>
 
       <div className={styles.techMarquee}>
