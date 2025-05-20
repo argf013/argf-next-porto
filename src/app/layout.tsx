@@ -21,6 +21,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Muhamad Arfa Alghiffari',
   description: 'Portfolio of Muhamad Arfa Alghiffari',
+  verification: {
+    google: 'biIcBHI_vrSkVt38Uvtc2FAKMj5T4CyrdeE2hPyCCAE',
+  },
 }
 
 export default function RootLayout({
