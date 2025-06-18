@@ -38,7 +38,7 @@ export default function ExperiencePage() {
       school: 'Jakarta State Polytechnic of Creative Media',
       department: 'Department of Design. Study Program in Multimedia Engineering Technology.',
       period: 'Jakarta, Indonesia 2020 - 2024. GPA (3.6)',
-      logo: 'https://005027.sgp1.vultrobjects.com/sikad/gambar/Logo.LswyahUtkX.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=6OWHMXMNIU2JY5WPLX3R%2F20250511%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20250511T103206Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&x-id=GetObject&X-Amz-Signature=29df8864532e7fa23940c9a93fbacc24b2b00eb216acb286b67e54fef501a1b8',
+      logo: 'https://infectionstudio.com/wp-content/uploads/2019/08/07_Polimedia.png',
     },
   ]
 

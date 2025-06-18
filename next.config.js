@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['005027.sgp1.vultrobjects.com'],
+    domains: ['infectionstudio.com'],
   },
 
   experimental: {
