@@ -49,7 +49,7 @@ export default function Footer() {
 
   return (
     <footer className='bg-transparent text-white py-10 border-t border-gray-800'>
-      <div className='container mx-auto px-4 md:px-6 max-w-6xl'>
+      <div className='container mx-auto px-8 md:px-6 max-w-6xl'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12'>
           <div className='space-y-4'>
             <h2 className='text-2xl font-bold mb-4'>Get in Touch</h2>
@@ -65,7 +65,7 @@ export default function Footer() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className='w-full px-3 py-2 rounded-md bg-gray-800 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition text-white'
+                  className='w-full px-3 py-2 rounded-md bg-gray-900 border border-gray-600 focus:border-gray-400 focus:ring-1 focus:ring-gray-400 outline-none transition text-white'
                   placeholder='Your name'
                 />
               </div>
@@ -80,7 +80,7 @@ export default function Footer() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className='w-full px-3 py-2 rounded-md bg-gray-800 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition text-white'
+                  className='w-full px-3 py-2 rounded-md bg-gray-900 border border-gray-600 focus:border-gray-400 focus:ring-1 focus:ring-gray-400 outline-none transition text-white'
                   placeholder='your.email@example.com'
                 />
               </div>
@@ -95,23 +95,23 @@ export default function Footer() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className='w-full px-3 py-2 rounded-md bg-gray-800 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition text-white'
+                  className='w-full px-3 py-2 rounded-md bg-gray-900 border border-gray-600 focus:border-gray-400 focus:ring-1 focus:ring-gray-400 outline-none transition text-white'
                   placeholder='Your message...'
                 />
               </div>
               <button
                 type='submit'
                 disabled={isSubmitting}
-                className='bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-md transition duration-200 font-medium disabled:opacity-70 flex items-center justify-center'
+                className='bg-white hover:bg-gray-200 text-black py-2 px-6 rounded-md transition duration-200 font-medium disabled:opacity-70 flex items-center justify-center'
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
 
               {submitStatus === 'success' && (
-                <p className='text-green-400 mt-2'>Message sent successfully!</p>
+                <p className='text-gray-300 mt-2'>Message sent successfully!</p>
               )}
               {submitStatus === 'error' && (
-                <p className='text-red-400 mt-2'>Failed to send message. Please try again.</p>
+                <p className='text-gray-400 mt-2'>Failed to send message. Please try again.</p>
               )}
             </form>
           </div>
@@ -121,12 +121,17 @@ export default function Footer() {
               <h2 className='text-2xl font-bold mb-4'>Contact Information</h2>
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3'>
-                  <svg fill='#EEE7DD' className='h-5.5 w-5.5' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                      <path d='M22,3H2A1,1,0,0,0,1,4V20a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V4A1,1,0,0,0,22,3ZM21,19H3V9.477l8.628,3.452a1.01,1.01,0,0,0,.744,0L21,9.477ZM21,7.323l-9,3.6-9-3.6V5H21Z'></path>
+                  <svg
+                    fill='#EEE7DD'
+                    className='h-5.5 w-5.5'
+                    viewBox='0 0 24 24'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path d='M22,3H2A1,1,0,0,0,1,4V20a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V4A1,1,0,0,0,22,3ZM21,19H3V9.477l8.628,3.452a1.01,1.01,0,0,0,.744,0L21,9.477ZM21,7.323l-9,3.6-9-3.6V5H21Z'></path>
                   </svg>
                   <a
                     href='mailto:alghi344@gmail.com'
-                    className='hover:text-blue-400 transition-colors'
+                    className='hover:text-gray-300 transition-colors'
                   >
                     alghi344@gmail.com
                   </a>
@@ -142,7 +147,7 @@ export default function Footer() {
                     href='https://www.linkedin.com/in/muhamad-arfa-alghiffari-706419208/'
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='hover:text-blue-400 transition-colors'
+                    className='hover:text-gray-300 transition-colors'
                   >
                     linkedin.com/in/muhamad-arfa
                   </a>
@@ -153,7 +158,7 @@ export default function Footer() {
                     href='https://github.com/argf013'
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='hover:text-blue-400 transition-colors'
+                    className='hover:text-gray-300 transition-colors'
                   >
                     github.com/arfaalghiffari
                   </a>

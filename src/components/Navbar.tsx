@@ -41,7 +41,7 @@ export default function Navbar() {
           href={item.path}
           className={`px-3 py-2 rounded-md text-sm transition-colors ${
             pathname === item.path ? 'bg-white/[.06] font-medium' : 'hover:bg-white/[.03]'
-          } ${isMobile ? 'block w-full' : ''}`}
+          } ${isMobile ? 'block w-full  ' : ''}`}
           onClick={() => isMobile && setIsMenuOpen(false)}
           prefetch={true}
         >
@@ -51,7 +51,7 @@ export default function Navbar() {
     ))
 
   return (
-    <nav className='fixed top-0 left-0 right-0 z-50 h-[100px] flex items-center bg-transparent backdrop-blur-md border-b border-white/[.12]'>
+    <nav className='fixed top-0 left-0 right-0 z-50 h-[100px] flex items-center bg-black/5 backdrop-blur-md border-b border-white/[.12] isolate'>
       <div className='w-full max-w-6xl mx-auto px-4 flex items-center justify-between md:justify-center h-full'>
         <button
           className='md:hidden flex items-center transition-transform duration-300 ease-in-out hover:scale-110'
@@ -115,11 +115,11 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`md:hidden bg-[#0A0A0A] backdrop-blur-2xl absolute top-[100px] left-0 right-0 overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`md:hidden bg-black/5 backdrop-blur-2xl absolute top-[100px] left-0 right-0 overflow-hidden transition-all duration-300 ease-in-out ${
           isMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className='bg-[#0A0A0A] backdrop-blur-md pt-2 pb-4'>
+        <div className='bg-black/80 backdrop-blur-2xl pt-2 pb-4 isolate'>
           <ul className='flex flex-col items-center space-y-1'>
             {renderNavItems([...leftNavItems, ...rightNavItems])}
           </ul>
