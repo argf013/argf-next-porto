@@ -48,7 +48,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className='bg-transparent text-white py-10 border-t border-gray-800'>
+    <footer className='bg-transparent text-white py-8 border-t border-gray-800'>
       <div className='container mx-auto px-8 md:px-6 max-w-6xl'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12'>
           <div className='space-y-4'>
@@ -65,7 +65,7 @@ export default function Footer() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className='w-full px-3 py-2 rounded-md bg-gray-900 border border-gray-600 focus:border-gray-400 focus:ring-1 focus:ring-gray-400 outline-none transition text-white'
+                  className='w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 focus:border-gray-400 focus:ring-1 focus:ring-gray-400 outline-none transition text-white'
                   placeholder='Your name'
                 />
               </div>
@@ -80,7 +80,7 @@ export default function Footer() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className='w-full px-3 py-2 rounded-md bg-gray-900 border border-gray-600 focus:border-gray-400 focus:ring-1 focus:ring-gray-400 outline-none transition text-white'
+                  className='w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 focus:border-gray-400 focus:ring-1 focus:ring-gray-400 outline-none transition text-white'
                   placeholder='your.email@example.com'
                 />
               </div>
@@ -95,14 +95,14 @@ export default function Footer() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className='w-full px-3 py-2 rounded-md bg-gray-900 border border-gray-600 focus:border-gray-400 focus:ring-1 focus:ring-gray-400 outline-none transition text-white'
+                  className='w-full px-3 py-2 rounded-md bg-transparent border border-gray-600 focus:border-gray-400 focus:ring-1 focus:ring-gray-400 outline-none transition text-white'
                   placeholder='Your message...'
                 />
               </div>
               <button
                 type='submit'
                 disabled={isSubmitting}
-                className='bg-white hover:bg-gray-200 text-black py-2 px-6 rounded-md transition duration-200 font-medium disabled:opacity-70 flex items-center justify-center'
+                className='bg-white hover:bg-gray-200 cursor-pointer text-black py-2 px-6 rounded-md transition duration-200 font-medium disabled:opacity-70 flex items-center justify-center'
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
@@ -149,7 +149,7 @@ export default function Footer() {
                     rel='noopener noreferrer'
                     className='hover:text-gray-300 transition-colors'
                   >
-                    linkedin.com/in/muhamad-arfa
+                    Muhamad Arfa Alghiffari
                   </a>
                 </div>
                 <div className='flex items-center space-x-3'>
@@ -160,49 +160,12 @@ export default function Footer() {
                     rel='noopener noreferrer'
                     className='hover:text-gray-300 transition-colors'
                   >
-                    github.com/arfaalghiffari
+                    argf013
                   </a>
                 </div>
               </div>
             </div>
 
-            <div>
-              <h2 className='text-xl font-bold mb-2'>Skills & Technologies I`ve used</h2>
-              <div className='grid grid-cols-2 gap-2 text-gray-300'>
-                <div>
-                  <ul className='space-y-1'>
-                    <li className='flex items-center space-x-2'>
-                      <SiReact size={16} className='text-[#61DAFB]' />
-                      <span>React / Next.js</span>
-                    </li>
-                    <li className='flex items-center space-x-2'>
-                      <SiTypescript size={16} className='text-[#3178C6]' />
-                      <span>TypeScript</span>
-                    </li>
-                    <li className='flex items-center space-x-2'>
-                      <SiNodedotjs size={16} className='text-[#339933]' />
-                      <span>Node.js</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <ul className='space-y-1'>
-                    <li className='flex items-center space-x-2'>
-                      <SiTailwindcss size={16} className='text-[#06B6D4]' />
-                      <span>TailwindCSS</span>
-                    </li>
-                    <li className='flex items-center space-x-2'>
-                      <SiPostgresql size={16} className='text-[#4169E1]' />
-                      <span>PostgreSQL</span>
-                    </li>
-                    <li className='flex items-center space-x-2'>
-                      <SiGit size={16} className='text-[#F05032]' />
-                      <span>Git/GitHub</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 

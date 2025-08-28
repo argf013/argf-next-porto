@@ -1,3 +1,4 @@
+'use client'
 import {
   SiReact,
   SiTypescript,
@@ -14,6 +15,7 @@ import {
   SiGoogleappsscript,
 } from '@icons-pack/react-simple-icons'
 import Image from 'next/image'
+import { motion, Variants } from 'framer-motion'
 
 export default function ExperiencePage() {
   const frontendSkills = [
@@ -117,11 +119,25 @@ export default function ExperiencePage() {
     },
   ]
 
+  // Animation variants
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+  }
+
   return (
     <div className='grid grid-rows-[20px_1fr_20px] items-center min-h-screen p-8 pb-20 gap-10 sm:p-20 font-[family-name:var(--font-geist-sans)]'>
       <main className='flex flex-col gap-10 row-start-2 w-full max-w-4xl mx-auto'>
         <h1 className='text-4xl font-bold mb-8 text-center'>My Experience</h1>
-        <section className=''>
+
+        {/* Animate Skills section */}
+        <motion.section
+          variants={fadeUp as Variants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.2 }}
+          className=''
+        >
           <h2 className='text-2xl font-bold mb-4 border-b pb-2'>Skills</h2>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
@@ -149,9 +165,16 @@ export default function ExperiencePage() {
               </ul>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className='mt-8'>
+        {/* Animate Education section */}
+        <motion.section
+          variants={fadeUp as Variants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.2 }}
+          className='mt-8'
+        >
           <h2 className='text-2xl font-bold mb-4 border-b pb-2'>Education</h2>
 
           {education.map((edu, index) => (
@@ -172,14 +195,25 @@ export default function ExperiencePage() {
               </div>
             </div>
           ))}
-        </section>
+        </motion.section>
 
-        <section className='mt-8'>
+        {/* Animate Experience section */}
+        <motion.section
+          variants={fadeUp as Variants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.2 }}
+          className='mt-8'
+        >
           <h2 className='text-2xl font-bold mb-6 border-b pb-2'>Experience</h2>
 
           {experiences.map((exp, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={fadeUp as Variants}
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true, amount: 0.2 }}
               className={`${
                 index < experiences.length - 1 ? 'mb-8' : ''
               } rounded-lg border p-6 hover:shadow-md transition-shadow`}
@@ -210,9 +244,9 @@ export default function ExperiencePage() {
                   <li key={respIndex}>{resp}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
-        </section>
+        </motion.section>
       </main>
 
       <a

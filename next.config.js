@@ -3,6 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['infectionstudio.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.postimg.cc',
+      },
+    ],
   },
 
   experimental: {
