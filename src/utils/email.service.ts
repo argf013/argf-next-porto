@@ -33,6 +33,11 @@ export async function sendEmailJS({
     })
     return response.data
   } catch (error) {
-    throw error?.response?.data || error
+    const errorTyped = error as { response?: { data: unknown } }
+    throw new Error(
+      `Failed to send email: ${
+        errorTyped.response ? JSON.stringify(errorTyped.response.data) : error
+      }`
+    )
   }
 }
