@@ -1,9 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import {
-  SiGithub
-} from '@icons-pack/react-simple-icons'
+import { SiGithub } from '@icons-pack/react-simple-icons'
+import { sendEmailJS } from '../utils/email.service'
 
 export default function Footer() {
   const [formData, setFormData] = useState({
@@ -27,8 +26,7 @@ export default function Footer() {
     setIsSubmitting(true)
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      console.log('Form submitted:', formData)
+      await sendEmailJS(formData)
       setSubmitStatus('success')
       setFormData({ name: '', email: '', message: '' })
     } catch (error) {
@@ -159,7 +157,6 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
