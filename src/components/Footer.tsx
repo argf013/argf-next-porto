@@ -2,13 +2,7 @@
 
 import React, { useState } from 'react'
 import {
-  SiGithub,
-  SiReact,
-  SiTypescript,
-  SiNodedotjs,
-  SiTailwindcss,
-  SiPostgresql,
-  SiGit,
+  SiGithub
 } from '@icons-pack/react-simple-icons'
 
 export default function Footer() {

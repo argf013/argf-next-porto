@@ -1,12 +1,41 @@
 'use client'
 
 import { ProjectCard } from '@/components/project/ProjectCard'
-import { motion, useAnimation } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 
+type Project = {
+  image: string
+  title: string
+  description: string
+  techstack: { name: string }[]
+  link?: string
+}
+
+// AnimatedProjectCard handles its own ref and inView state
+function AnimatedProjectCard({ project, idx }: { project: Project; idx: number }) {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: '-50px' })
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 40, filter: 'blur(12px)' }}
+      animate={
+        inView
+          ? { opacity: 1, y: 0, filter: 'blur(0px)' }
+          : { opacity: 0, y: 40, filter: 'blur(12px)' }
+      }
+      transition={{ duration: 0.6, delay: idx * 0.1, ease: 'easeOut' }}
+    >
+      <ProjectCard {...project} />
+    </motion.div>
+  )
+}
+
 export default function ProjectsPage() {
-  const projects = [
+  const projects: Project[] = [
     {
       image: 'https://i.postimg.cc/vZrhQncW/antholog-home.png',
       title: 'Antholog',
@@ -112,30 +141,14 @@ export default function ProjectsPage() {
             Check out my latest work
           </h1>
           <span className='text-muted-foreground text-sm text-center mx-auto'>
-            I've worked on a variety of projects, from simple websites to complex web applications.
-            Here are a few of my favorites.
+            I&apos;ve worked on a variety of projects, from simple websites to complex web
+            applications. Here are a few of my favorites.
           </span>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 justify-center'>
-          {projects.map((project, idx) => {
-            const ref = useRef(null)
-            const isInView = useInView(ref, { once: true, margin: '-50px' })
-            return (
-              <motion.div
-                key={idx}
-                ref={ref}
-                initial={{ opacity: 0, y: 40, filter: 'blur(12px)' }}
-                animate={
-                  isInView
-                    ? { opacity: 1, y: 0, filter: 'blur(0px)' }
-                    : { opacity: 0, y: 40, filter: 'blur(12px)' }
-                }
-                transition={{ duration: 0.6, delay: idx * 0.1, ease: 'easeOut' }}
-              >
-                <ProjectCard {...project} />
-              </motion.div>
-            )
-          })}
+          {projects.map((project, idx) => (
+            <AnimatedProjectCard key={idx} project={project} idx={idx} />
+          ))}
         </div>
       </main>
     </div>
