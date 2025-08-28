@@ -32,8 +32,7 @@ export async function sendEmailJS({
       },
     })
     return response.data
-  } catch (error: any) {
-    // You can customize error handling as needed
+  } catch (error) {
     throw error?.response?.data || error
   }
 }
